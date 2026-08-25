@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-palette="violet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gunaseelan | 3rd Year B.Sc. Student & Tech Portfolio | Kumbakonam</title>
+    <meta name="description" content="Personal portfolio of Gunaseelan, 3rd Year B.Sc. Student from Kumbakonam, Tamil Nadu. Certified in Naan Mudhalvan, MS Excel, HTML5 & CSS3 Web Development.">
+    <meta name="keywords" content="Gunaseelan, Portfolio, B.Sc Student, Kumbakonam, Naan Mudhalvan, MS Excel, HTML, CSS, Web Developer, Resume">
+    <meta name="author" content="Gunaseelan">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Gunaseelan | Colorful & Neat Student Portfolio">
+    <meta property="og:description" content="3rd Year B.Sc. Student from Kumbakonam | Certified in Naan Mudhalvan, MS Excel, HTML & CSS.">
+    <meta property="og:type" content="website">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Dynamic Background Particle Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Ambient Glowing Blobs -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- =========================================================================
+         NAVIGATION BAR
+         ========================================================================= -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="nav-brand" id="brand-logo">
+                <div class="brand-badge">G</div>
+                <div class="brand-text">
+                    <span class="brand-name">GUNASEELAN</span>
+                    <span class="brand-location"><i class="fa-solid fa-location-dot"></i> Kumbakonam, TN</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#certificates" class="nav-link">Certificates</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#interactive-calc" class="nav-link">GPA Calculator</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <!-- Color Theme Palettes -->
+                <div class="theme-controls" title="Change Color Accent">
+                    <button class="palette-btn palette-violet active" data-color="violet" title="Neon Violet Palette"></button>
+                    <button class="palette-btn palette-cyan" data-color="cyan" title="Cyber Cyan Palette"></button>
+                    <button class="palette-btn palette-sunset" data-color="sunset" title="Sunset Coral Palette"></button>
+                    <button class="palette-btn palette-emerald" data-color="emerald" title="Emerald Wave Palette"></button>
+                </div>
+
+                <!-- Dark / Light Mode Switcher -->
+                <button class="theme-toggle-btn" id="theme-toggle" title="Toggle Light/Dark Mode" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-sun"></i>
+                </button>
+
+                <!-- Resume Button -->
+                <button class="btn btn-primary btn-sm open-resume-btn" id="nav-resume-btn">
+                    <i class="fa-solid fa-file-arrow-down"></i> Resume
+                </button>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-toggle" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Text Column -->
+                <div class="hero-content">
+                    <div class="hero-chip-row">
+                        <span class="hero-chip"><i class="fa-solid fa-location-dot"></i> Kumbakonam, Tamil Nadu</span>
+                        <span class="hero-chip"><i class="fa-solid fa-graduation-cap"></i> 3rd Year B.Sc.</span>
+                        <span class="hero-chip highlight"><i class="fa-solid fa-award"></i> Naan Mudhalvan Certified</span>
+                    </div>
+
+                    <div class="hero-greeting">
+                        <i class="fa-solid fa-hand-sparkles"></i> Hello, I'm
+                    </div>
+
+                    <h1 class="hero-name">
+                        <span class="gradient-text">GUNASEELAN</span>
+                    </h1>
+
+                    <div class="hero-typewriter-container">
+                        <span>I am an aspiring&nbsp;</span>
+                        <span class="typed-text" id="typed-role"></span>
+                        <span class="cursor-blink"></span>
+                    </div>
+
+                    <p class="hero-bio">
+                        Dedicated 3rd Year B.Sc. student from the historic temple city of <strong>Kumbakonam</strong>. Passionate about crafting neat, modern web layouts with <strong>HTML5 & CSS3</strong>, mastering data operations in <strong>MS Excel & Office</strong>, and building technical readiness through the prestigious <strong>Naan Mudhalvan</strong> initiative.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#certificates" class="btn btn-primary btn-glow" id="hero-cert-btn">
+                            <i class="fa-solid fa-certificate"></i> View Certificates
+                        </a>
+                        <a href="#interactive-calc" class="btn btn-secondary" id="hero-calc-btn">
+                            <i class="fa-solid fa-table-cells"></i> Live GPA / Excel Tool
+                        </a>
+                        <button class="btn btn-secondary open-resume-btn" id="hero-resume-btn">
+                            <i class="fa-solid fa-file-lines"></i> View Resume
+                        </button>
+                        <a href="#contact" class="btn btn-secondary" id="hero-contact-btn">
+                            <i class="fa-solid fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <div class="hero-skills-strip">
+                        <span class="skills-strip-label">Core Skills:</span>
+                        <div class="skills-strip-badges">
+                            <span class="skill-pill"><i class="fa-solid fa-graduation-cap" style="color:var(--accent-emerald);"></i> Naan Mudhalvan</span>
+                            <span class="skill-pill"><i class="fa-solid fa-file-excel" style="color:#107c41;"></i> MS Excel</span>
+                            <span class="skill-pill"><i class="fa-brands fa-html5" style="color:#e34f26;"></i> HTML5</span>
+                            <span class="skill-pill"><i class="fa-brands fa-css3-alt" style="color:#1572b6;"></i> CSS3</span>
+                            <span class="skill-pill"><i class="fa-solid fa-code" style="color:#007acc;"></i> VS Code</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Avatar Showcase Column -->
+                <div class="hero-visual">
+                    <div class="avatar-wrapper">
+                        <div class="avatar-inner">
+                            <img src="assets/images/guna.jpeg" alt="Gunaseelan - 3rd Year B.Sc. Student" class="avatar-img">
+                        </div>
+
+                        <!-- Floating Badges on Avatar -->
+                        <div class="float-card float-card-1">
+                            <div class="float-icon emerald">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div>
+                                <div class="float-title">Naan Mudhalvan</div>
+                                <div class="float-subtitle">Govt. Certified Student</div>
+                            </div>
+                        </div>
+
+                        <div class="float-card float-card-2">
+                            <div class="float-icon cyan">
+                                <i class="fa-solid fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <div class="float-title">Web & Office Ready</div>
+                                <div class="float-subtitle">HTML, CSS, MS Excel</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         STATS SECTION
+         ========================================================================= -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid" id="stats-grid">
+                <!-- Dynamically Rendered by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         ABOUT ME SECTION
+         ========================================================================= -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-user-tie"></i> About Me</span>
+                <h2 class="section-title">Academic Journey & <span class="gradient-text">Ambition</span></h2>
+                <p class="section-subtitle">A glimpse into my background, technical interests, and commitment to learning.</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-text-col">
+                    <h3 style="font-size: 1.75rem; margin-bottom: 1rem;">
+                        Hello! I am <span class="gradient-text">Gunaseelan</span>, a passionate student from Kumbakonam.
+                    </h3>
+                    <p>
+                        Currently in my <strong>3rd Year B.Sc. (Bachelor of Science)</strong>, I have cultivated a strong fascination for computer applications, web development, and digital productivity tools. Living in Kumbakonam—a city renowned for heritage, discipline, and culture—I bring the same focus and sincerity to every technical skill I acquire.
+                    </p>
+                    <p>
+                        Through the Tamil Nadu Government's flagship <strong>Naan Mudhalvan</strong> skill program, I strengthened my digital problem-solving skills, modern workplace competencies, and practical coding abilities. I have hands-on experience developing clean, responsive websites using <strong>HTML5 & CSS3</strong>, writing formulas in <strong>MS Excel</strong>, and structuring documents with the <strong>MS Office Suite</strong>.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Quick Learner & Adaptable</span>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Neat & Structured Code Format</span>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>MS Excel & Data Entry Pro</span>
+                        </div>
+                        <div class="about-feature-item">
+                            <i class="fa-solid fa-circle-check"></i>
+                            <span>Disciplined & Goal-Oriented</span>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fa-solid fa-envelope"></i> Let's Connect
+                        </a>
+                        <button class="btn btn-secondary" id="open-kumbakonam-btn">
+                            <i class="fa-solid fa-city"></i> Explore Kumbakonam City
+                        </button>
+                    </div>
+                </div>
+
+                <div class="about-cards-grid">
+                    <div class="info-card glass-card">
+                        <div class="info-card-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4>3rd Year B.Sc.</h4>
+                        <p>Pursuing undergraduate science degree with focus on computing, analytical reasoning, and scientific methodology.</p>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="info-card-icon" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4>Naan Mudhalvan</h4>
+                        <p>Proudly completed the state-sponsored technology skilling curriculum with practical verification.</p>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="info-card-icon" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h4>Web Frontend</h4>
+                        <p>Building responsive, accessible web pages using modern HTML5, CSS3 Grid/Flexbox, and VS Code workflows.</p>
+                    </div>
+
+                    <div class="info-card glass-card">
+                        <div class="info-card-icon" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">
+                            <i class="fa-solid fa-file-excel"></i>
+                        </div>
+                        <h4>MS Office Mastery</h4>
+                        <p>Skilled in Excel formulas (VLOOKUP, IF, calculations), data visualization, spreadsheets, and presentation design.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         SKILLS MATRIX SECTION
+         ========================================================================= -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-laptop-code"></i> Technical Matrix</span>
+                <h2 class="section-title">My Skills & <span class="gradient-text">Proficiencies</span></h2>
+                <p class="section-subtitle">A breakdown of my technical toolkit, office applications, and professional strengths.</p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="skills-nav" id="skills-tabs">
+                <button class="skill-tab-btn active" data-cat="all">
+                    <i class="fa-solid fa-border-all"></i> All Skills
+                </button>
+                <button class="skill-tab-btn" data-cat="web">
+                    <i class="fa-solid fa-code"></i> Web Development
+                </button>
+                <button class="skill-tab-btn" data-cat="office">
+                    <i class="fa-solid fa-file-excel"></i> MS Office & Excel
+                </button>
+                <button class="skill-tab-btn" data-cat="tools">
+                    <i class="fa-solid fa-toolbox"></i> Tools & Editors
+                </button>
+                <button class="skill-tab-btn" data-cat="soft">
+                    <i class="fa-solid fa-users"></i> Soft Skills
+                </button>
+            </div>
+
+            <!-- Dynamic Skills Grid -->
+            <div class="skills-content-container" id="skills-container">
+                <!-- Dynamically rendered by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         CERTIFICATES & BADGES SECTION (HIGH PRIORITY)
+         ========================================================================= -->
+    <section class="certificates-section" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-award"></i> Verified Credentials</span>
+                <h2 class="section-title">Certificates & <span class="gradient-text">Achievements</span></h2>
+                <p class="section-subtitle">Official certifications in Naan Mudhalvan, MS Excel & Office Suite, HTML5, CSS3, and Development Tools.</p>
+            </div>
+
+            <div class="certificates-grid" id="certificates-grid">
+                <!-- Dynamically populated by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         LIVE PROJECTS & PORTFOLIO SHOWCASE
+         ========================================================================= -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-cubes"></i> Practical Work</span>
+                <h2 class="section-title">Featured Projects & <span class="gradient-text">Showcases</span></h2>
+                <p class="section-subtitle">Hands-on applications demonstrating web design, Excel data modeling, and cultural tourism design.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Student GPA & Grade Analyzer -->
+                <div class="project-card glass-card">
+                    <div class="project-thumb-box">
+                        <img src="assets/images/excel-dashboard.jpg" alt="Student GPA and Grade Analyzer" class="project-thumb-img">
+                        <span class="project-category-badge"><i class="fa-solid fa-table-cells"></i> MS Excel & JS Tool</span>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <h3>Student GPA & Grade Analyzer</h3>
+                            <p>An interactive student academic calculation dashboard built with MS Excel logic, featuring automated grade calculations, percentage tracking, and one-click spreadsheet report export.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3</span>
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Excel CSV Export</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#interactive-calc" class="btn btn-primary btn-sm">
+                                <i class="fa-solid fa-calculator"></i> Try Live Tool Below
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Kumbakonam Heritage Web Portal -->
+                <div class="project-card glass-card">
+                    <div class="project-thumb-box">
+                        <img src="assets/images/kumbakonam.jpg" alt="Kumbakonam Heritage and Tourism Portal" class="project-thumb-img">
+                        <span class="project-category-badge"><i class="fa-solid fa-city"></i> Web Development</span>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <h3>Kumbakonam Heritage & Tourism Portal</h3>
+                            <p>A responsive landing page project showcasing the rich cultural history, iconic temple architecture, Mahamaham festival, and brass handicrafts of Kumbakonam city.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5</span>
+                            <span class="project-tag">CSS3 Grid</span>
+                            <span class="project-tag">Responsive UI</span>
+                            <span class="project-tag">Glassmorphism</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-primary btn-sm" id="btn-show-kumbakonam" onclick="openKumbakonamModal()">
+                                <i class="fa-solid fa-eye"></i> View Project Modal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Gunaseelan Colorful Portfolio -->
+                <div class="project-card glass-card">
+                    <div class="project-thumb-box">
+                        <img src="assets/images/guna.jpeg" alt="Gunaseelan Portfolio Website" class="project-thumb-img">
+                        <span class="project-category-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Portfolio</span>
+                    </div>
+                    <div class="project-body">
+                        <div>
+                            <h3>Gunaseelan Colorful Portfolio v1</h3>
+                            <p>This state-of-the-art personal portfolio website featuring custom neon color palettes, particle animation canvas, interactive certificate viewer, and instant resume printer.</p>
+                        </div>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML5 / CSS3</span>
+                            <span class="project-tag">Theme Engine</span>
+                            <span class="project-tag">Print Media CSS</span>
+                            <span class="project-tag">Canvas API</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-primary btn-sm open-resume-btn">
+                                <i class="fa-solid fa-file-lines"></i> View Resume Modal
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         INTERACTIVE STUDENT GRADE & GPA ANALYZER (MS EXCEL / JS TOOL)
+         ========================================================================= -->
+    <section class="interactive-section" id="interactive-calc">
+        <div class="container">
+            <div class="calculator-wrapper" id="interactive-calc-wrapper">
+                <div class="calc-header">
+                    <div class="calc-title-box">
+                        <div class="calc-icon">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <div>
+                            <h3>Student Semester Grade & GPA Calculator</h3>
+                            <p>Interactive demonstration of MS Excel spreadsheet logic & JavaScript computation.</p>
+                        </div>
+                    </div>
+
+                    <div style="display:flex; gap:0.6rem; flex-wrap:wrap;">
+                        <button class="btn btn-secondary btn-sm" id="calc-add-row">
+                            <i class="fa-solid fa-plus"></i> Add Subject
+                        </button>
+                        <button class="btn btn-primary btn-sm" id="calc-export-csv">
+                            <i class="fa-solid fa-file-excel"></i> Export Excel CSV
+                        </button>
+                    </div>
+                </div>
+
+                <div class="calc-table-container">
+                    <table class="calc-table">
+                        <thead>
+                            <tr>
+                                <th>Subject Name / Module</th>
+                                <th>Credits</th>
+                                <th>Marks Secured (out of 100)</th>
+                                <th style="text-align: center;">Grade Point</th>
+                                <th style="text-align: center;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="calc-tbody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="calc-results-box">
+                    <div class="result-item">
+                        <div class="result-label">Total Marks</div>
+                        <div class="result-val gradient-text" id="calc-total-marks">0 / 500</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Overall Percentage</div>
+                        <div class="result-val gradient-text-cyan" id="calc-percentage">0%</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Cumulative GPA (10 Pt)</div>
+                        <div class="result-val gradient-text-emerald" id="calc-gpa">0.0 / 10.0</div>
+                    </div>
+                    <div class="result-item">
+                        <div class="result-label">Academic Standing</div>
+                        <div class="result-val gradient-text-amber" id="calc-grade" style="font-size:1.35rem;">Outstanding</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         EDUCATION & TIMELINE SECTION
+         ========================================================================= -->
+    <section class="education-section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-graduation-cap"></i> Academic Milestones</span>
+                <h2 class="section-title">Education & <span class="gradient-text">Learning Path</span></h2>
+                <p class="section-subtitle">My academic qualification journey from school in Kumbakonam to 3rd Year B.Sc. and skill certifications.</p>
+            </div>
+
+            <div class="timeline" id="education-timeline">
+                <!-- Dynamically rendered by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         CONTACT SECTION
+         ========================================================================= -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+                <h2 class="section-title">Let's Connect & <span class="gradient-text">Collaborate</span></h2>
+                <p class="section-subtitle">Feel free to reach out for opportunities, academic discussions, or career mentorship.</p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Contact Info Column -->
+                <div class="contact-info-col">
+                    <a href="mailto:gunaseelan.official@example.com" class="contact-card-item glass-card">
+                        <div class="contact-icon-box">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Address</h4>
+                            <p>gunaseelan.official@example.com</p>
+                        </div>
+                    </a>
+
+                    <a href="tel:+919876543210" class="contact-card-item glass-card">
+                        <div class="contact-icon-box" style="color:var(--accent-emerald); background:rgba(16,185,129,0.15);">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone / Call</h4>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </a>
+
+                    <div class="contact-card-item glass-card">
+                        <div class="contact-icon-box" style="color:var(--accent-cyan); background:rgba(6,182,212,0.15);">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Current Location</h4>
+                            <p>Kumbakonam, Thanjavur District, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="contact-card-item glass-card">
+                        <div class="contact-icon-box" style="color:#25d366; background:rgba(37,211,102,0.15);">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>WhatsApp Instant Chat</h4>
+                            <p>Message directly on WhatsApp</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Contact Form Column -->
+                <div class="contact-form-wrapper glass-card">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">Your Full Name *</label>
+                            <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">Your Email Address *</label>
+                            <input type="email" id="contact-email" class="form-input" placeholder="e.g. john@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject" class="form-label">Subject</label>
+                            <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Internship Opportunity / Inquiry">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">Your Message *</label>
+                            <textarea id="contact-message" class="form-textarea" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Send Message Now
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         FOOTER
+         ========================================================================= -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-bio">
+                    <div class="nav-brand" style="margin-bottom:0.85rem;">
+                        <div class="brand-badge">G</div>
+                        <div class="brand-text">
+                            <span class="brand-name">GUNASEELAN</span>
+                            <span class="brand-location">Kumbakonam, Tamil Nadu</span>
+                        </div>
+                    </div>
+                    <p>3rd Year B.Sc. Student dedicated to continuous skill acquisition, modern web technologies, and office automation excellence.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Quick Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#skills">Skills Matrix</a></li>
+                        <li><a href="#certificates">Certificates</a></li>
+                        <li><a href="#interactive-calc">GPA Calculator</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Key Highlights</h4>
+                    <ul class="footer-links">
+                        <li><a href="#certificates"><i class="fa-solid fa-check" style="color:var(--accent-emerald);"></i> Naan Mudhalvan Course</a></li>
+                        <li><a href="#certificates"><i class="fa-solid fa-check" style="color:var(--accent-cyan);"></i> MS Excel Certification</a></li>
+                        <li><a href="#certificates"><i class="fa-solid fa-check" style="color:var(--primary-light);"></i> HTML5 & CSS3 Web</a></li>
+                        <li><a href="#education"><i class="fa-solid fa-check" style="color:var(--accent-amber);"></i> 3rd Year B.Sc. Student</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; 2026 Gunaseelan. Crafted with passion, HTML5, CSS3 & JavaScript.</div>
+                <div>📍 Kumbakonam, Tamil Nadu, India</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         MODAL CONTAINER (FOR CERTIFICATE PREVIEW, RESUME, TOURISM)
+         ========================================================================= -->
+    <div class="modal-backdrop" id="modal-backdrop">
+        <div class="modal-card">
+            <button class="modal-close-btn" id="modal-close-btn" title="Close Window" aria-label="Close Modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div id="modal-dynamic-content">
+                <!-- Dynamically inserted by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" title="Scroll to Top" aria-label="Back to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
